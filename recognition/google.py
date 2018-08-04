@@ -80,7 +80,7 @@ def text_recognition(path, config):
                 continue
 
     remove_file(tmp_path)
-    with open(txt_path, 'w') as f:
+    with open(txt_path, 'w', encoding = 'utf-8') as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
 
     return out
